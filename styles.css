@@ -14,6 +14,8 @@ body {
     justify-content: center;
     align-items: center; /* Center the container vertically and horizontally */
     overflow: hidden; /* Prevent body from being scrollable */
+    padding: 20px; /* Add padding for smaller devices */
+    box-sizing: border-box; /* Ensure padding does not cause overflow */
 }
 
 .container {
@@ -54,7 +56,6 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 button:hover {
@@ -67,5 +68,45 @@ button:hover {
     line-height: 1.8;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
+}
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #shlokaDisplay {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #shlokaDisplay {
+        font-size: 14px;
+    }
 }
